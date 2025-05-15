@@ -2,7 +2,7 @@ NCTF-摆就完事了1 writeup
 
 首次访问题目环境显示403 Forbidden
 
-![web-1.1](\img\web-1.1.png)
+![web-1.1](..\img\web-1.1.png)
 
 先上dirsearch扫一波目录，看看有啥东西：
 
