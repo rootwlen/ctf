@@ -18,16 +18,16 @@ header.payload.signature
 
 打开题目地址，经典登录页面：
 
-![web-2.1](C:\Users\wlen\Desktop\img2\web-2.1.png)
+![web-2.1](https://github.com/rootwlen/ctf/blob/main/web%20/img/web-2.1.png)
 
 按照题目描述，jwt肯定要注册账号，这里可以尝试登录下，用户名可以枚举的，有admin账号，猜测应该要伪造admin的jwt来获取flag.
 
 注册root账号：
-![web-2.2](C:\Users\wlen\Desktop\img2\web-2.2.png)
+![web-2.2](https://github.com/rootwlen/ctf/blob/main/web%20/img/web-2.2.png)
 
 登录root账号：
 
-![web-2.3](C:\Users\wlen\Desktop\img2\web-2.3.png)
+![web-2.3](https://github.com/rootwlen/ctf/blob/main/web%20/img/web-2.3.png)
 
 果然这里有JWT，
 
@@ -36,7 +36,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QifQ.ky8i6QnQs2Sb2X9s
 ```
 
 先base64解码看下签名算法：
-![web-2.7](C:\Users\wlen\Desktop\img2\web-2.7.png)
+![web-2.7](https://github.com/rootwlen/ctf/blob/main/web%20/img/web-2.7.png)
 
 签名算法：HS256，对称加密的，这里可以尝试伪造下JWT，先获取secert:
 
@@ -73,7 +73,7 @@ for combo in itertools.product(chars, repeat=4):
 
 可以看到，单线程的情况下5位比4位多了一个量级😅😅😅，考虑的解题时间，这里就按少于5位进行爆破的
 
-![web-2.6](C:\Users\wlen\Desktop\img2\web-2.6.png)
+![web-2.6](https://github.com/rootwlen/ctf/blob/main/web%20/img/web-2.6.png)
 
 爆破出的密钥：NuAa
 
@@ -83,7 +83,7 @@ https://jwt.io/
 
 伪造admin用户的JWT：
 
-![web-2.4](C:\Users\wlen\Desktop\img2\web-2.4.png)
+![web-2.4](https://github.com/rootwlen/ctf/blob/main/web%20/img/web-2.4.png)
 
 ```
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIn0.SYQ-AGwY5XIcxY621ToK8zEgomHE0Bla9tAUWTLxnwA
@@ -91,6 +91,6 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIn0.SYQ-AGwY5XIcxY6
 
 替换root用户的JWT：
 
-![web-2.5](C:\Users\wlen\Desktop\img2\web-2.5.png)
+![web-2.5](https://github.com/rootwlen/ctf/blob/main/web%20/img/web-2.5.png)
 
 得到flag
