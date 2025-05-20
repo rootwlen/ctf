@@ -38,6 +38,7 @@
 ![web-4.2](https://github.com/rootwlen/ctf/blob/main/web%20/img/web-4.2.png)
 
 访问下这个接口：
+
 ![web-4.3](https://github.com/rootwlen/ctf/blob/main/web%20/img/web-4.3.png)
 
 直接显示了请求头的信息，这里其实可以进行请求头xss注入。。。但是这个系列的题目中flag都在cookie中，可以利用这个页面，直接读取页面中的cookie信息回弹webhook.
