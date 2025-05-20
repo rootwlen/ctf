@@ -39,6 +39,6 @@ debug接口有鉴权，访问不成功了，emm,现在可以知道的是，请�
 
 ![web-5.2](https://github.com/rootwlen/ctf/blob/main/web%20/img/web-5.2.png)
 
-webhook回传 Node.js中读取 HTTP 响应内容时未做 `stream` 转换处理直接返回了原始 `ReadableStream` 对象
+webhook回传 Node.js中读取 HTTP 响应内容时未做 `stream` 转换处理直接返回的原始 `ReadableStream` 对象
 
 ![web-5.3](https://github.com/rootwlen/ctf/blob/main/web%20/img/web-5.3.png)
