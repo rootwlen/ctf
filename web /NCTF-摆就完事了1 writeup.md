@@ -7,6 +7,7 @@ NCTF-摆就完事了1 writeup
 
 ![web-1.2](https://github.com/rootwlen/ctf/blob/main/web%20/img/web-1.2.png)
 
+
 发现有源码的压缩包，（还有个DS_Store文件泄漏，不过这里都有源码了。。），下载下来看看：
 
 ![web-1.3](https://github.com/rootwlen/ctf/blob/main/web%20/img/web-1.3.png)
