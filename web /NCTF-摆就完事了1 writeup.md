@@ -16,6 +16,7 @@ tp的框架，emm,先看下版本，直接添加路径致报错查看版本号
 
 ![web-1.4](https://github.com/rootwlen/ctf/blob/main/web%20/img/web-1.4.png)
 
+
 tp5.0.16,这个版本的tp有rce的nday,
 
 
